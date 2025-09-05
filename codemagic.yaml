@@ -1,0 +1,24 @@
+workflows:
+  react-native-ios:
+    name: React Native iOS Build
+    instance_type: mac_mini_m2
+    environment:
+      node: 18
+      xcode: 15.4
+    scripts:
+      - name: Install dependencies
+        script: npm install
+      - name: Install pods
+        script: |
+          pod cache clean --all
+          cd ios && arch -x86_64 pod install
+      - name: Build debug app for simulator
+        script: |
+          set -x
+          # The fix is adding the "clean" command before "build"
+          xcodebuild clean build -workspace ios/go_solar.xcworkspace \
+                           -scheme go_solar \
+                           -sdk iphonesimulator \
+                           -derivedDataPath build
+artifacts:
+  - build/Build/Products/Debug-iphonesimulator/*.app

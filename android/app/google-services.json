@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "392588962708",
+    "project_id": "gosolar-11568",
+    "storage_bucket": "gosolar-11568.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392588962708:android:7792268dffa6c11da57d81",
+        "android_client_info": {
+          "package_name": "com.gosolaregypt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBST9Z0u5GkBUNnt8PUUx6U-8ZPn3YoVzc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
